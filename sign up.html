@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <head>
+        <script>  
+            function validateform(){  
+            var name=document.myform.name.value;  
+            var password=document.myform.password.value;  
+              
+            if (name==null || name==""){  
+              alert("Name can't be blank");  
+              return false;  
+            }else if(password.length<6){  
+              alert("Password must be at least 6 characters long.");  
+              return false;  
+              }  
+            }  
+            </script>  
+        <title>Sign Up Form</title>
+        <link rel="stylesheet"  type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <div class="sign-up-form">
+            <img src="user-icon.png">
+            <h1>Sign Up Now</h1>
+            <form>
+               <input type="email" class="input-box" placeholder="Your Email">
+               <input type="password" class="input-box" placeholder="Your Password">
+               <p><span><input type="checkbox"></span>I agree to the terms of services</p>
+               <button type="button" class="signup-btn">Sign up</button>
+               <hr>
+               <p class="or">OR</p>
+               <button type="button" class="signup-btn">Login with google</button>
+               <p>Do you have an account ? <a href="login.html">Sign in</a></p>
+            </form>
+        </div>
+    </body>
+</html>

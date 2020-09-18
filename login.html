@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <script>  
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value;  
+      
+    if (name==null || name=="")
+    {  
+      alert("Name can't be blank");  
+      return false;  
+    }
+    else if(password.length<6)
+    {  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+    }  
+    return true;
+    }  
+    </script>  
+<title> Login Form </title>
+     <link rel="stylesheet" type="text/css" href="style2.css">
+      <body>
+            <div class="loginbox">
+                <img src="user-icon.png" class="user-icon">
+                <h1>Login!</h1>
+                <form name="myform" method="post" action="event.html" onsubmit="return validateform()">
+                    <p> Username </p>
+                    <input type="text" name="name"placeholder="Enter Username">
+                    <p>Password</p>
+                    <input type="Password" name="password" placeholder=" Enter Password">
+                    <input type="Submit" name="" value="Login">
+                    <a href="#"> Lost your password?</a><br>
+                    <a href="sign up.html"> Don't have an account?</a>
+                  </form>
+            </div>
+
+</body>
+</head>
+</html>
